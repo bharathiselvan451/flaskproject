@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/budgetstyle.css">
+</head>
+<body>
+
+    <h3>ONCE YOU SET YOUR BUDGET YOU WOULD NOT BE ABLE TO CHANHE IT FOR NEXT 30 DAYS</h3>
+
+    {% if error %}  
+        <p><strong>Error</strong>: {{error}}</p>  
+    {% endif %}
+
+    <form class="setbudget" action="/budget" method="post">
+
+        <label class="budgetlabel">SET BUDGET</label><br>
+        <input class="budgetin" type="text" id="budget" name="budget"><br>
+        <input type="submit" class="budgetsubmit">
+        
+
+    </form>
+    
+    
+</body>
+</html>
