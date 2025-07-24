@@ -127,7 +127,7 @@ def index4():
                 error="mail sent"
                 server = smtplib.SMTP('smtp.gmail.com',587)
                 server.starttls()
-                server.login('YOUR_MAIL','roynrwxxwpzjfxsp')
+                server.login('YOUR_MAIL','')
                 server.sendmail('YOUR_MAIL',Gmail,'MONTHLY BUDGET EXCEEDED - peta team')
                 return render_template('dashboard.html',error=error,expense = user.expense,budget = user.budget)
             else:
